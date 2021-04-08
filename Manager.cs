@@ -3,25 +3,25 @@ namespace InheritanceTask
     public abstract class Manager : Employee
     {
         private decimal baseSalary;
-        private decimal bonus;
-        public Manager(string name, decimal basePay, decimal bonusPay) : base(name)
+        // private decimal bonus;
+        public Manager(string name, decimal basePay) : base(name)
         {
             BaseSalary = basePay;
-            Bonus = bonusPay;
+            // Bonus = bonusPay;
         }
-        public decimal Bonus
-        {
-            get { return bonus; }
-            private set {
-                            if (value > 0)
-                            {
-                                bonus = value; 
-                            }else
-                            {
-                                throw new System.ArgumentOutOfRangeException();
-                            }
-                        }
-        }
+        // public decimal Bonus
+        // {
+        //     get { return bonus; }
+        //     private set {
+        //                     if (value > 0)
+        //                     {
+        //                         bonus = value; 
+        //                     }else
+        //                     {
+        //                         throw new System.ArgumentOutOfRangeException();
+        //                     }
+        //                 }
+        // }
         
         public decimal BaseSalary
         {

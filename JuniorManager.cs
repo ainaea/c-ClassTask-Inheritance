@@ -3,7 +3,8 @@ namespace InheritanceTask
     public class JuniorManager : Manager
     {
         private int workHour;
-        public JuniorManager(string name, decimal monthlyBase, decimal bonus, int workHour) : base(name, monthlyBase, bonus)
+        private static decimal bonus = 300M;
+        public JuniorManager(string name, decimal monthlyBase, int workHour) : base(name, monthlyBase)
         {
             WorkHour = workHour;
         }
@@ -23,7 +24,7 @@ namespace InheritanceTask
 
         public override decimal GetSalary()
         {
-            return WorkHour >= 180? BaseSalary + Bonus: BaseSalary;
+            return WorkHour >= 180? BaseSalary + bonus: BaseSalary;
         }
 
         
