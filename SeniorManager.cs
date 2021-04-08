@@ -3,8 +3,8 @@ namespace InheritanceTask
     public class SeniorManager : Manager
     {
         private int evaluations;
-        public static decimal bonus = 500M;
-        public SeniorManager(string name, decimal baseSalary, int evaluations) : base(name, baseSalary)
+        // public static decimal bonus = 500M;
+        public SeniorManager(string name, decimal baseSalary, int evaluations) : base(name, baseSalary, 500M)
         {
             Evaluations = evaluations;
         }
@@ -23,7 +23,7 @@ namespace InheritanceTask
         }
         public override decimal GetSalary()
         {
-            return Evaluations >= 6? BaseSalary + bonus: BaseSalary;
+            return Evaluations >= 6? BaseSalary + Bonus: BaseSalary;
         }
 
         
