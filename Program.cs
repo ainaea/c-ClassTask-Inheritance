@@ -11,7 +11,7 @@ namespace InheritanceTask
 
             foreach (Employee employee in allEmployees)
             {
-                Console.WriteLine($"{employee.Name} will takehome {employee.GetSalary()}");
+                Console.WriteLine($"{employee.Name} will takehome {employee.GetSalary():C}");
             }
         }
     }
